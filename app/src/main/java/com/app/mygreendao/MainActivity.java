@@ -25,10 +25,16 @@ public class MainActivity extends AppCompatActivity {
         btAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                  i++;
-                  User user=new User(1,"JAck","女"+i,"22");
-                  DBManager dbManager=DBManager.getNewInstance(MainActivity.this);
-                  dbManager.insertUSER(user);
+                DBManager dbManager=DBManager.getNewInstance(MainActivity.this);
+                for (int i=0;i<6;i++){
+                    User user=new User();
+                    user.setId(i);
+                    user.setAge("22");
+                    user.setGender("男");
+                    user.setName("第"+i+"个");
+                    dbManager.insertUSER(user);
+                }
+
             }
         });
 
