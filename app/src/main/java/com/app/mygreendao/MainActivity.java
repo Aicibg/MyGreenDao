@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                     builder.append("id="+user.getId()+"\n"
                     +"name="+user.getName()+"\n"
                             +"gender="+user.getGender()+"\n"
-                            +"age="+user.getAge());
+                            +"age="+user.getAge()+"\n");
                 }
                 textView.setText(builder.toString());
             }
