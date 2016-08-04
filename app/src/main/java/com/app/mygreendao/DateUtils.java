@@ -161,7 +161,7 @@ public final class DateUtils {
             day = (int) ((date.getTime() - myDate.getTime()) / (24 * 60 * 60 * 1000));
         } catch (ParseException e) {
             e.printStackTrace();
-            Log.e(TAG, e);
+            Log.e(TAG, e.toString());
         }
         return isAbs ? Math.abs(day) : day;
     }
@@ -230,7 +230,7 @@ public final class DateUtils {
             return getWeekDate(d);
         } catch (ParseException e) {
             e.printStackTrace();
-            Logger.e(TAG, e);
+            Log.e(TAG, e.toString());
         }
         return "星期数未知";
     }
