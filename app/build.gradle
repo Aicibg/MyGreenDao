@@ -20,6 +20,7 @@ android {
     }
 
     greendao {
+        //数据库版本
         schemaVersion 1
         daoPackage 'com.anye.greendao.gen'
         targetGenDir 'src/main/java'
